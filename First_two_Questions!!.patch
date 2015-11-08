@@ -1,0 +1,250 @@
+Index: .idea/.name
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/.name	(revision )
++++ .idea/.name	(revision )
+@@ -0,0 +1,1 @@
++Spoj
+\ No newline at end of file
+Index: .idea/copyright/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/copyright/profiles_settings.xml	(revision )
++++ .idea/copyright/profiles_settings.xml	(revision )
+@@ -0,0 +1,3 @@
++<component name="CopyrightManager">
++  <settings default="" />
++</component>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision )
++++ .idea/misc.xml	(revision )
+@@ -0,0 +1,26 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="EntryPointsManager">
++    <entry_points version="2.0" />
++  </component>
++  <component name="MavenImportPreferences">
++    <option name="generalSettings">
++      <MavenGeneralSettings>
++        <option name="mavenHome" value="Bundled (Maven 3)" />
++      </MavenGeneralSettings>
++    </option>
++  </component>
++  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
++    <OptionsSetting value="true" id="Add" />
++    <OptionsSetting value="true" id="Remove" />
++    <OptionsSetting value="true" id="Checkout" />
++    <OptionsSetting value="true" id="Update" />
++    <OptionsSetting value="true" id="Status" />
++    <OptionsSetting value="true" id="Edit" />
++    <ConfirmationsSetting value="0" id="Add" />
++    <ConfirmationsSetting value="0" id="Remove" />
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision )
++++ .idea/modules.xml	(revision )
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/Spoj.iml" filepath="$PROJECT_DIR$/Spoj.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(revision )
++++ .idea/vcs.xml	(revision )
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/LifeUniverseAndEverything.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/LifeUniverseAndEverything.java	(revision )
++++ src/LifeUniverseAndEverything.java	(revision )
+@@ -0,0 +1,28 @@
++import java.io.BufferedReader;
++import java.io.InputStreamReader;
++
++
++public class LifeUniverseAndEverything {
++
++    public static void main(String[] args) {
++        try{
++            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
++            int n = Integer.parseInt(br.readLine());
++            String ans="";
++
++            while (n != 42){
++                ans = ans + n + "\n";
++                n = Integer.parseInt(br.readLine());
++
++
++            }
++
++            System.out.println(ans);
++        }
++        catch (Exception e){
++            e.printStackTrace();
++        }
++
++
++    }
++}
+Index: Spoj.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Spoj.iml	(revision )
++++ Spoj.iml	(revision )
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(revision )
++++ .idea/compiler.xml	(revision )
+@@ -0,0 +1,22 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <resourceExtensions />
++    <wildcardResourcePatterns>
++      <entry name="!?*.java" />
++      <entry name="!?*.form" />
++      <entry name="!?*.class" />
++      <entry name="!?*.groovy" />
++      <entry name="!?*.scala" />
++      <entry name="!?*.flex" />
++      <entry name="!?*.kt" />
++      <entry name="!?*.clj" />
++      <entry name="!?*.aj" />
++    </wildcardResourcePatterns>
++    <annotationProcessing>
++      <profile default="true" name="Default" enabled="false">
++        <processorPath useClasspath="true" />
++      </profile>
++    </annotationProcessing>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/PRIME1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/PRIME1.java	(revision )
++++ src/PRIME1.java	(revision )
+@@ -0,0 +1,66 @@
++import java.io.BufferedReader;
++import java.io.InputStreamReader;
++import java.util.StringTokenizer;
++
++
++public class PRIME1 {
++
++
++    public static void printPrimes(int low, int up){
++        int sol[] = new int[up + 1];
++        for (int i = 0; i < up+1; i++) {
++            sol[i] = 0;
++        }
++        sol[0] = 1;
++        sol[1] = 1;
++
++        for (int i = 2; i < (up +1)/2; i++){
++            int k = 2;
++            int b = i * k;
++            while (b <= up){
++                sol[b] = 1;
++                k++;
++                b = i * k;
++            }
++        }
++
++        for (int i = 0; i < up + 1; i++) {
++            if (sol[i] == 0 && i >= low){
++                System.out.println(i);
++            }
++        }
++        System.out.println("");
++
++
++    }
++    public static void main(String[] args) throws Exception{
++        int n;
++        int[] lower,upper;
++        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
++        n = Integer.parseInt(br.readLine());
++        lower = new int[n];
++        upper = new int[n];
++        int k = 0;
++        int t = n;
++        while (t > 0){
++            String s = br.readLine();
++            StringTokenizer st = new StringTokenizer(s);
++            String st1[] =new String[2];
++            int i = 0;
++            while (st.hasMoreTokens()){
++                st1[i++] = st.nextToken();
++            }
++            lower[k] = Integer.parseInt(st1[0]);
++            upper[k] = Integer.parseInt(st1[1]);
++            k++;
++            t-- ;
++        }
++        t = n;
++        k = 0;
++        while (t > 0){
++            printPrimes(lower[k], upper[k]);
++            k++;
++            t--;
++        }
++    }
++}
