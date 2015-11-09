@@ -7,32 +7,62 @@ import java.io.InputStreamReader;
 public class SimpleSum {
 
     public static void main(String[] args) throws Exception {
-        int t;
+    /*    int t;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         t = Integer.parseInt(br.readLine());
-        int ans[] = new int[t];
+        int ans[] = new int[t];// 6 = 6 + 3 + 2 +3 +6+1
         int i = 0;
-        while (i < t) {
-            int n = Integer.parseInt(br.readLine());
-            ans[i++] = calc(n);
+        int max = 0;
+        int n[] = new int[t];*/
+
+        for (int i = 0; i < 40; i++) {
+            int temp =calc(i);
+            System.out.println((i) + " " +(temp));
         }
 
-        for (int j = 0; j < ans.length; j++) {
-            System.out.println(ans[j]);
-        }
     }
 
-    private static int gcd(int a, int b) {
-        if (b == 0) {
-            return a;
-        } else return gcd(b, a % b);
+    private static int gcd(int u, int v) {
+        // simple cases (termination)
+        if (u == v)
+            return u;
+
+        if (u == 0)
+            return v;
+
+        if (v == 0)
+            return u;
+
+        // look for factors of 2
+        if (u % 2 == 0) // u is even
+        {
+            if (v % 2 == 1) // v is odd
+                return gcd(u >> 1, v);
+            else // both u and v are even
+                return gcd(u >> 1, v >> 1) << 1;
+        }
+
+        if (v % 2 == 0) // u is odd, v is even
+            return gcd(u, v >> 1);
+
+        // reduce larger argument
+        if (u > v)
+            return gcd((u - v) >> 1, v);
+
+        return gcd((v - u) >> 1, u);
     }
+
 
     private static int calc(int n) {
+
         int sum = 0;
 
         for (int i = 1; i <= n; i++) {
-            sum+=(n/(gcd(n,i)));
+            int temp = gcd(i, n);
+            int s = n/temp;
+            sum+=s;
+
+
         }
 
         return sum;
