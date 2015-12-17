@@ -18,7 +18,7 @@ public class Factorial {
                     }
 
                     no2+=w;
-                    System.out.println(no2);
+                    //System.out.println(no2);
                     k = k / 2;
                 } else if (k % 5 == 0) {
                     no5++;
@@ -32,16 +32,16 @@ public class Factorial {
     }
 
     public static void main(String[] args) {
-        int t = 0;
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));*//**//*
+        int t=10;
         try {
-            t = Integer.parseInt(br.readLine());
+           t = Integer.parseInt(br.readLine());
             int cases[] = new int[t];
             int ans[] = new int[t];
             int i = 0;
-            while (i < t) {
-                cases[i] = Integer.parseInt(br.readLine());
+         while (i < t) {
+          cases[i] = Integer.parseInt(br.readLine());
                 int w = 0, max = 0, flag = 0;
                 while (w < i) {
                     if (cases[w] < cases[i] && cases[w] > cases[max]) {
@@ -65,6 +65,10 @@ public class Factorial {
 
         } catch (Exception e) {
             e.printStackTrace();
+        }*/
+
+        for(int i=1000;i<1200;i++){
+            System.out.println(i+" "+zeros(i,0,0));
         }
 
     }

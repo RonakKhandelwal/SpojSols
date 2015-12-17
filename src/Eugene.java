@@ -30,6 +30,19 @@ public class Eugene {
         for (int j = 0; j < ans.length; j++) {
             System.out.println(ans[j]);
         }
+
+        /*for (int i = 1; i < 10; i++) {
+            for (int j = 1; j < 10; j++) {
+                for (int k = 1; k < 10; k++) {
+                    for (int l = 1; l < k; l++) {
+                        System.out.println(i + " " + j + " " + l + " " + k + " " + apFx(i, j, l, k));
+                    }
+                }
+            }
+        }*/
+
+
+
       /*  for (long i = 1; i < 10; i++) {
             for (long j = 1; j < 10; j++) {
                 for (long k = 1; k < 10; k++) {
@@ -43,7 +56,7 @@ public class Eugene {
 
     private static long apFx(long a, long d, long l, long r) {
         long sum = 0;
-        long add ;
+        long add;
         long num = a + (l - 1) * d;
         add = f(num);
 
@@ -54,10 +67,10 @@ public class Eugene {
 
         } else {
 
-           // long w = d % 9;
-            long x = r - l +1;
+            // long w = d % 9;
+            long x = r - l + 1;
             if (x % 9 == 0) {
-                x = x/9;
+                x = x / 9;
                 sum = 45 * x;
                 return sum;
             } else {
